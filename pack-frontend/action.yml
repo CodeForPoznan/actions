@@ -16,7 +16,7 @@ runs:
   steps:
     - name: build code
       shell: bash
-      run: make pack-frontend
+      run: make -f ../Makefile pack-frontend
       working-directory: frontend
       env:
         NODE_ENV: ${{ inputs.environment-name }}
