@@ -16,8 +16,7 @@ runs:
   steps:
     - name: build code
       shell: bash
-      working-directory: ./frontend
-      run: yarn run build --dest ../public
+      run: make pack-frontend
       env:
         NODE_ENV: ${{ inputs.environment-name }}
         ENVIRONMENT_NAME: ${{ inputs.environment-name }}
@@ -26,6 +25,6 @@ runs:
     - uses: actions/upload-artifact@v3
       with:
         name: frontend
-        path: ./public
+        path: ../public
         retention-days: 1
         if-no-files-found: error
