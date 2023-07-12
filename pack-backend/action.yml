@@ -17,7 +17,7 @@ runs:
     - name: pack dependencies
       shell: bash
       working-directory: backend
-      run: make pack-backend
+      run: make -f ../Makefile pack-backend
 
     - uses: actions/upload-artifact@v3
       with:
