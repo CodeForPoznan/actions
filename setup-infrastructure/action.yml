@@ -4,7 +4,7 @@ description: Sets up runner environment for infrastructure code.
 inputs:
   terraform-version:
     description: Terraform version to use
-    default: '1.1.8'
+    default: '1.5.3'
     required: false
     type: string
 
