@@ -4,12 +4,12 @@ description: Sets up runner environment for frontend code.
 inputs:
   node-version:
     description: Node.js version to use
-    default: '12'
+    default: '18'
     required: false
     type: string
   yarn-version:
     description: Yarn version to use
-    default: '1.22.15'
+    default: '1.22.19'
     required: false
     type: string
 
