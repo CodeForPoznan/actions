@@ -23,7 +23,7 @@ runs:
         ENVIRONMENT_NAME: ${{ inputs.environment-name }}
         ENVIRONMENT_URL: ${{ inputs.environment-url }}
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: frontend
         path: ./public
