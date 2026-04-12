@@ -16,7 +16,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
 
@@ -27,7 +27,7 @@ runs:
         value: yarn cache dir
       run: echo "${name}=$(${value})" >> $GITHUB_ENV
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       id: cache-yarn
       with:
         path: |
@@ -42,7 +42,7 @@ runs:
       working-directory: ./frontend
       run: npm install --global yarn@${{ inputs.yarn-version }}
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       id: cache-lockfile
       with:
         path: |
