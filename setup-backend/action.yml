@@ -21,7 +21,7 @@ runs:
       with:
         python-version: ${{ inputs.python-version }}
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       id: cache-pipenv
       with:
         path: |
@@ -36,7 +36,7 @@ runs:
       working-directory: ./backend
       run: pip install pipenv==${{ inputs.pipenv-version }}
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       id: cache-lockfile
       with:
         path: ./backend/.venv
