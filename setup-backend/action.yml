@@ -16,12 +16,12 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/setup-python@v4
+    - uses: actions/setup-python@v5
       id: setup-python
       with:
         python-version: ${{ inputs.python-version }}
 
-    - uses: actions/cache@v4
+    - uses: actions/cache@v5
       id: cache-pipenv
       with:
         path: |
@@ -36,7 +36,7 @@ runs:
       working-directory: ./backend
       run: pip install pipenv==${{ inputs.pipenv-version }}
 
-    - uses: actions/cache@v4
+    - uses: actions/cache@v5
       id: cache-lockfile
       with:
         path: ./backend/.venv
